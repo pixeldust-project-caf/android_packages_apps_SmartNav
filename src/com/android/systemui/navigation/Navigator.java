@@ -39,6 +39,7 @@ import com.android.systemui.statusbar.phone.NotificationPanelView;
 import com.android.systemui.statusbar.policy.KeyButtonDrawable;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.view.View;
@@ -94,6 +95,13 @@ public interface Navigator extends PluginListener<NavGesture> {
     public default KeyButtonDrawable getBackDrawable(Context lightContext, Context darkContext) { return null; }
     public default KeyButtonDrawable getHomeDrawable(Context lightContext, Context darkContext) { return null; }
     public default KeyButtonDrawable getRecentsDrawable(Context lightContext, Context darkContext) { return null; }
+
+    /*
+     * Custom methods introduced by Pixel Dust Project
+     */
+    public default void setFullGestureMode(boolean full, boolean dt2s) {}
+    public default void notifyPulseScreenOn(boolean screenOn) {}
+    public default void sendIntentToPulse(Intent intent) {}
 
     /*
      * DUI additional methods to support additional winning ;D
