@@ -93,6 +93,7 @@ public interface Navigator extends PluginListener<NavGesture> {
     public default void onNavigationButtonLongPress(View v) {};
     public default KeyButtonDrawable getBackDrawable(Context lightContext, Context darkContext) { return null; }
     public default KeyButtonDrawable getHomeDrawable(Context lightContext, Context darkContext) { return null; }
+    public default KeyButtonDrawable getRecentsDrawable(Context lightContext, Context darkContext) { return null; }
 
     /*
      * DUI additional methods to support additional winning ;D
